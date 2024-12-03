@@ -10,7 +10,6 @@ import { getDefaultValue } from './defaultValues';
 
 import { LanguageServerService } from '../../api/proto/exa/language_server_pb/language_server_connect';
 import { InlineCompletionProvider } from './InlineCompletionProvider';
-import { CodeiumLogo } from '../CodeiumLogo/CodeiumLogo';
 import { Document } from '../../models';
 import { deepMerge } from '../../utils/merge';
 
@@ -190,17 +189,6 @@ export const CodeiumEditor: React.FC<CodeiumEditorProps> = ({
       }}
       className={containerClassName}
     >
-      <a
-        href={'https://codeium.com?referrer=codeium-editor'}
-        target="_blank"
-        rel="noreferrer noopener"
-      >
-        <CodeiumLogo
-          width={30}
-          height={30}
-          style={{ position: 'absolute', top: 12, right: 12, zIndex: 1 }}
-        />
-      </a>
       <Editor
         {...defaultLanguageProps}
         {...props}
